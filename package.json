@@ -28,7 +28,8 @@
     "nmi": "^1.0.3",
     "payflow": "^1.0.0",
     "rocketgate": "^1.0.0",
-    "virtualmerchant": "^1.0.0"
+    "virtualmerchant": "^1.0.0",
+    "42-cent-payeezy": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "^1.21.4"

@@ -34,6 +34,14 @@ You can see the API the gateway intends to fulfill by looking at the [BaseGatewa
 
 **Note:** All builds are run daily thanks to [Travis CI cron jobs](https://docs.travis-ci.com/user/cron-jobs/).
 
+- Omise
+- Stripe
+- Braintree
+- PayPal
+- WorldPay
+- Beanstream
+- Payeezy
+
 [![Build Status](https://travis-ci.org/continuous-software/42-cent-braintree.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-braintree) [Braintree](https://github.com/continuous-software/42-cent-braintree)  
 [![Build Status](https://travis-ci.org/continuous-software/42-cent-omise.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-omise) [Omise](https://github.com/continuous-software/42-cent-omise)  
 [![Build Status](https://travis-ci.org/continuous-software/42-cent-stripe.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-stripe) [Stripe](https://github.com/continuous-software/42-cent-stripe)  
@@ -52,3 +60,22 @@ Feel free to go and fix things if you can.
 [![Build Status](https://travis-ci.org/continuous-software/node-payflow.svg?branch=master)](https://travis-ci.org/continuous-software/node-payflow) [Payflow](https://github.com/continuous-software/node-payflow)  
 [![Build Status](https://travis-ci.org/continuous-software/node-rocketgate.svg?branch=master)](https://travis-ci.org/continuous-software/node-rocketgate) [RocketGate](https://github.com/continuous-software/node-rocketgate)  
 [![Build Status](https://travis-ci.org/continuous-software/node-virtualmerchant.svg?branch=master)](https://travis-ci.org/continuous-software/node-virtualmerchant) [VirtualMerchant](https://github.com/continuous-software/node-virtualmerchant)  
+
+## Gateway Specific Configuration
+
+### Payeezy
+
+```javascript
+var client = Gateways.use('Payeezy', {
+  apiKey: 'your-api-key',
+  apiSecret: 'your-api-secret',
+  merchantToken: 'your-merchant-token',
+  environment: 'sandbox' // or 'production'
+});
+```
+
+Required configuration:
+- `apiKey`: Your Payeezy API key
+- `apiSecret`: Your Payeezy API secret
+- `merchantToken`: Your Payeezy merchant token
+- `environment`: Either 'sandbox' or 'production' (default: 'sandbox')
